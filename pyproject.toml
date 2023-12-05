@@ -7,6 +7,10 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+pandas = "^2.1.3"
+pytest = "^7.4.3"
+requests = "^2.31.0"
+pandas-stubs = "^2.1.1.230928"
 
 
 [tool.poetry.group.lint.dependencies]
@@ -14,6 +18,10 @@ flake8 = "^6.1.0"
 mypy = "^1.7.1"
 black = "^23.11.0"
 isort = "^5.12.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest-cov = "^4.1.0"
 
 [build-system]
 requires = ["poetry-core"]
