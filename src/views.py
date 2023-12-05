@@ -27,7 +27,8 @@ def get_currencies(data_currencies: list) -> Any:
     try:
         list_currencies = []
         for currencie in data_currencies:
-            url = f"https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency={currencie}&to_currency=RUB&apikey=LDR21XHBHX66Z8G9"
+            url = f"""https://www.alphavantage.co/query?function=
+            CURRENCY_EXCHANGE_RATE&from_currency={currencie}&to_currency=RUB&apikey=LDR21XHBHX66Z8G9"""
             data = requests.get(url).json()
             list_currencies.append({
                 "currency": data['Realtime Currency Exchange Rate']['1. From_Currency Code'],

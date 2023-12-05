@@ -14,13 +14,13 @@ def spending_by_category(
         category: str,
         date: Optional[str] = None
 ) -> pd.DataFrame:
-    '''
+    """
     Функция возвращает траты по заданной категории за последние 3 месяца (от переданной даты).
     :param transactions: Датафрейм с транзакциями
     :param category: Название категории
     :param date: Опциональная дата
     :return: json
-    '''
+    """
     start_date = pd.to_datetime(date, format='%d.%m.%Y', dayfirst=True)
     logging.info("Преобразуем задаваемую дату в формат даты")
     transactions['Дата операции'] = pd.to_datetime(transactions['Дата операции'], format='%d.%m.%Y %H:%M:%S')
